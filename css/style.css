@@ -1077,6 +1077,17 @@ a {
     color: #000000;
 }
 
+.site-footer__contact,
+.site-footer__instagram {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3em;
+}
+
+.site-footer__label {
+    color: #000000;
+}
+
 @media (min-width: 601px) {
     .statement--intro,
     .statement--outro {
@@ -1688,9 +1699,28 @@ a {
     }
 
     .site-footer__inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .site-footer__legal-link,
+    .site-footer__contact {
+        grid-column: 1;
+    }
+
+    .site-footer__contact {
+        flex-wrap: wrap;
+    }
+
+    .site-footer__instagram {
+        grid-column: 2;
+        grid-row: 1 / 4;
+        align-self: end;
         align-items: flex-start;
         flex-direction: column;
-        gap: 20px;
+        gap: 2px;
     }
 }
 
